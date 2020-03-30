@@ -1,0 +1,8 @@
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\bin\Debug\Projet Vincent Poupet.exe.config
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\bin\Debug\Projet Vincent Poupet.exe
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\bin\Debug\Projet Vincent Poupet.pdb
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\obj\Debug\Projet Vincent Poupet.csprojResolveAssemblyReference.cache
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\obj\Debug\Projet Vincent Poupet.csproj.CoreCompileInputs.cache
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\obj\Debug\Projet Vincent Poupet.exe
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\obj\Debug\Projet Vincent Poupet.pdb
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Projet Vincent Poupet\bin\Debug\Projet Vincent Poupet.xml

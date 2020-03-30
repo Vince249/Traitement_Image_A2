@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Projet Vincent Poupet</name>
+    </assembly>
+    <members>
+        <member name="T:Projet_Vincent_Poupet.MyImage">
+            <summary>
+            Classe qui remplace en quelques sortes la classe Bitmap
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.#ctor(System.String)">
+            <summary>
+            Constructeur de la classe MyImage
+            </summary>
+            <param name="NomFichierAvecExtension">
+            Contient le chemin (absolu avec WPF, relatif dans les tests qu'on a pu faire)
+            </param>
+        </member>
+        <member name="P:Projet_Vincent_Poupet.MyImage.Largeur">
+            <summary>
+            Permet d'accéder à la valeur de la largeur de l'instance
+            </summary>
+        </member>
+        <member name="P:Projet_Vincent_Poupet.MyImage.Hauteur">
+            <summary>
+            Permet d'accéder à la valeur de la hauteur de l'instance
+            </summary>
+        </member>
+        <member name="P:Projet_Vincent_Poupet.MyImage.MatriceDePixels">
+            <summary>
+            Permet d'accéder à la matrice de pixels de l'instance
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.PassageGris">
+            <summary>
+            Méthode qui passe l'image en nuance de gris
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.PassageBizarre">
+            <summary>
+            Cette méthode n'a pas d'intérêt, il s'agit d'une méthode ratée que nous avons conservé car nous appréciions son effet
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.AgrandirImageLargeur(System.Int32)">
+            <summary>
+            Cette méthode permet d'agrandir l'image en hauteur en fonction d'un coefficient donné
+            </summary>
+            <param name="coefficient">
+            Coefficient d'agrandissement entier qui sera compris entre 1 et 10 dans le WPF
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.AgrandirImageHauteur(System.Int32)">
+            <summary>
+            Cette méthode permet d'agrandir l'image en largeur en fonction d'un coefficient donné
+            </summary>
+            <param name="coefficient">
+            Coefficient d'agrandissement entier qui sera compris entre 1 et 10 dans le WPF
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.RetrecirImageHauteur(System.Int32)">
+            <summary>
+            Cette méthode permet de réduire l'image en hauteur en fonction d'un coefficient entier
+            </summary>
+            <param name="coefficient">
+            Coefficient de réduction en hauteur qui sera compris entre 1 et 10 dans le WPF
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.RetrecirImageLargeur(System.Int32)">
+            <summary>
+            Cette méthode permet de réduire l'image en largeur en fonction d'un coefficient entier
+            ATTENTION : Pour qu'une image puisse être lue il faut que sa largeur soit divisible par 4, c'est pourquoi on applique une méthode de correction après
+            </summary>
+            <param name="coefficient">
+            Coefficient de rédution de l'image en largeur qui sera compris entre 1 et 10 dans le WPF
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.CoderImageDansUneAutre(Projet_Vincent_Poupet.MyImage)">
+            <summary>
+            Cette méthode permet de dissimuler une image dans une autre. Elle s'applique à l'image dans laquelle on veut cacher quelque chose
+            </summary>
+            <param name="imagecachée">
+            Image que l'on veut cacher dans l'image principale
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.DécoderImageDansUneAutre">
+            <summary>
+            On applique cette méthode sur image contenant une image cachée pour récupérer son contenu
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.Histogramme(Projet_Vincent_Poupet.MyImage)">
+            <summary>
+            Cette méthode permet faire de l'image actuelle un histogramme d'une image passée en paramètre
+            </summary>
+            <param name="image">
+            Image dont on veut dresser l'histogramme
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.Fusion(Projet_Vincent_Poupet.Pixel[])">
+            <summary>
+            Permet de créer un Pixel qui sera la fusion de ceux d'un tableau passé en paramètre
+            </summary>
+            <param name="tab">
+            Tableau de Pixel dont on va vouloir faire la fusion
+            </param>
+            <returns>
+            renvoie le Pixel qui est le résultat de cette fusion
+            </returns>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.RotationSensTrigo">
+            <summary>
+            Permet de faire une rotation de l'image dans un sens trigonométrique, en sachant que l'origine de l'image est en bas à gauche pour nous
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.EffetMiroirParRapportALaVerticale">
+            <summary>
+            Cette méthode permet de faire un effet miroir de l'image à laquelle on applique cette méthode par rapport à un axe vertical
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.EffetMiroirParRapportAHorizontale">
+            <summary>
+            Cette méthode permet de faire un effet miroir de l'image à laquelle on applique cette méthode par rapport à un axe horizontal
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.PassageNoiretBlanc">
+            <summary>
+            Cette méthode transforme l'image à laquelle on applique cette méthode en une image en noir et blanc
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.FiltreFlou">
+            <summary>
+            Applique un filtre flou à l'image
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.FiltreFlouPlus">
+            <summary>
+            Applique un filtre flou plus puissant à l'image
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.FiltreRepoussage">
+            <summary>
+            Applique un filtre de repoussage à l'image
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.FiltreDetectionContours">
+            <summary>
+            Applique un filtre de détection de contours à l'image
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.FiltreRenforcementDesBords">
+            <summary>
+            Applique un filtre de renforcement des bords
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.CorrectionTaillefichierdivisibilitépar4">
+            <summary>
+            Cette méthode est très importante. Comme dit plus tôt, il faut que la largeur soit divisible par 4 pour que l'image puisse être lue.
+            Dans le doute, on applique aussi ceci à la hauteur car nous n'avons pas trouvé d'informations claires à ce sujet.
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.Fractale(System.Int32)">
+            <summary>
+            Cette méthode permet de transformer l'image en fractale créé avec un niveau de résolution passé en paramètre
+            </summary>
+            <param name="resolution">
+            Résolution entère passée en paramètre
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.EnregistrerImage(System.String)">
+            <summary>
+            Cette fonction permet d'enregistrer l'image après lui avoir appliqué des correctifs.
+            On reprend le header de l'image d'origine puis on le corrige en fonction des modifications qu'on a pu appliqué à l'image
+            </summary>
+            <param name="nometformat">
+            Chemin (absolu pour le PWF et relatif dans nos premiers tests) d'enregistrement de l'image
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.Convertir_Endian_To_Int(System.Byte[])">
+            <summary>
+            Fonction de conversion de Tableau de bytes big endian à entier
+            </summary>
+            <param name="tab">
+            Tableau de bytes à convertir
+            </param>
+            <returns>
+            Renvoie un entier correspondant au tableau de byte
+            </returns>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.MyImage.Convertir_Int_To_Endian(System.Int32,System.Int32)">
+            <summary>
+            Conversion d'entier à tableau de byte big endian
+            </summary>
+            <param name="valeur">
+            Valeur à convertir en tableau byte big endian
+            </param>
+            <param name="taille">
+            Taille du tableau de byte dans lequel on va convertir le nombre entier
+            </param>
+            <returns>
+            Renvoie le tableau de byte correspondant à la conversion
+            </returns>
+        </member>
+        <member name="T:Projet_Vincent_Poupet.Pixel">
+            <summary>
+            Classe Pixel qui permet d'éviter d'utiliser uniquement des tableaux de bytes
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.Pixel.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructeur de la classe Pixel
+            </summary>
+            <param name="RED">
+            Valeur du byte RED du Pixel
+            </param>
+            <param name="GREEN">
+            Valeur du byte GREEN du Pixel
+            </param>
+            <param name="BLUE">
+            Valeur dy byte BLUE du Pixel
+            </param>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.Pixel.PassageGris">
+            <summary>
+            Permet de passer le Pixel en niveau de gris
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.Pixel.PassageNoirEtBlanc">
+            <summary>
+            Permet de passer le Pixel en noir et blanc
+            </summary>
+        </member>
+        <member name="M:Projet_Vincent_Poupet.Pixel.PassageBizarre">
+            <summary>
+            Fonction que nous avons conservé malgré le fait qu'elle ne serve à rien car nous apprécions son résultat
+            </summary>
+        </member>
+        <member name="P:Projet_Vincent_Poupet.Pixel.rouge">
+            <summary>
+            Fonction qui permet de récupérer la valeur ROUGE du Pixel et la fixer
+            </summary>
+        </member>
+        <member name="P:Projet_Vincent_Poupet.Pixel.bleu">
+            <summary>
+            Fonction qui permet de récupérer la valeur BLEU du Pixel et la fixer
+            </summary>
+        </member>
+        <member name="P:Projet_Vincent_Poupet.Pixel.vert">
+            <summary>
+            Fonction qui permet de récupérer la valeur VERT du Pixel et la fixer
+            </summary>
+        </member>
+    </members>
+</doc>

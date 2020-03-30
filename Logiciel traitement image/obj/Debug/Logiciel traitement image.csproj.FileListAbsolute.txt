@@ -1,0 +1,19 @@
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Logiciel traitement image.exe.config
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Logiciel traitement image.exe
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Logiciel traitement image.pdb
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Projet Vincent Poupet.exe
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Projet Vincent Poupet.pdb
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Projet Vincent Poupet.exe.config
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image.csprojResolveAssemblyReference.cache
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\MainWindow.g.cs
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\App.g.cs
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image_MarkupCompile.cache
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image_MarkupCompile.lref
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\MainWindow.baml
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image.g.resources
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel_traitement_image.Properties.Resources.resources
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image.csproj.GenerateResource.Cache
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image.csproj.CoreCompileInputs.cache
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image.exe
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\obj\Debug\Logiciel traitement image.pdb
+C:\Users\Vince\source\repos\Année 2\Problème scientifique informatique - Traitement d'image\Projet Vincent Poupet\Logiciel traitement image\bin\Debug\Projet Vincent Poupet.xml

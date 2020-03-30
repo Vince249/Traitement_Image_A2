@@ -1,0 +1,132 @@
+﻿<Window x:Class="Logiciel_traitement_images.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Logiciel_traitement_images"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1000">
+	<Grid Margin="10,0,-6,-0.5">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="188*"/>
+			<ColumnDefinition Width="199*"/>
+		</Grid.ColumnDefinitions>
+
+
+		<!--< PAS OUBLIER DE METTRE LES CACHES EN DERNIER > -->
+
+		<TextBox x:Name="textBox" HorizontalAlignment="Left" Height="0" Margin="18,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" >
+			<TextBox.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform ScaleY="-1"/>
+					<SkewTransform/>
+					<RotateTransform Angle="-17.386"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</TextBox.RenderTransform>
+		</TextBox>
+
+
+		<Button x:Name="button" Content="Image d'origine" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="175" Height="50" Click="ClicOrigine"/>
+		<Button x:Name="button1" Content="Emplacement de sauvegarde" Margin="190,52,54.5,0" VerticalAlignment="Top" Width="175"  Height="50" Click="LieuEnregistrement"/>
+		<Button x:Name="button2" Content="Ouvrir une image" Margin="430,52,386,0" VerticalAlignment="Top" Height="50" Grid.ColumnSpan="2" Click="OuvrirImage"/>
+		<Image x:Name="image" Grid.Column="1" Margin="0,24,18,0" Height="107" VerticalAlignment="Top" HorizontalAlignment="Right" Width="161"/>
+		<TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="240.5,69,0,0" TextWrapping="Wrap" Text="Image choisie :" VerticalAlignment="Top" Height="18"/>
+
+
+		<DockPanel Margin="0,-22,0,34" HorizontalAlignment="Left" Width="900" Grid.ColumnSpan="2" >
+			<StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" Margin="2,5">
+
+			</StackPanel>
+			<!--< Début des onglets > -->
+			<TabControl Name="TableauOnglets" Margin="0,180,0,25" Width="884">
+				<TabItem Header="Modifier image" Width="150">
+					<Grid>
+
+						<Button Content="Passage en niveau de gris" HorizontalAlignment="Left" Margin="100,50,0,0" VerticalAlignment="Top" Width="200" Click="Button_PassageNiveauGris" Height="65"/>
+						<Button Content="Passage en noir et blanc" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Width="200" Click="Button_PassageNoirEtBlanc" Height="65"/>
+						<Button Content="Effet miroir horizontal" HorizontalAlignment="Left" Margin="550,200,0,0" VerticalAlignment="Top" Width="200" Click="Button_EffetMiroirHorizontal" Height="65"/>
+						<Button Content="Effet miroir vertical" HorizontalAlignment="Left" Margin="550,50,0,0" VerticalAlignment="Top" Width="200" Click="Button_EffetMiroirVertical" Height="65"/>
+
+					</Grid>
+
+				</TabItem>
+
+				<TabItem Header="Modifier taille" Width="150">
+					<Grid>
+
+						<Button Content="Agrandir image" HorizontalAlignment="Left" Margin="628,196,0,0" VerticalAlignment="Top" Width="200" Click="Button_AgrandirImage" Height="66"/>
+						<Button Content="Rétrécir image" HorizontalAlignment="Left" Margin="628,46,0,0" VerticalAlignment="Top" Width="200" Click="Button_RetrecirImage" Height="65"/>
+						<Button Content="Agrandir largeur" HorizontalAlignment="Left" Margin="329,196,0,0" VerticalAlignment="Top" Width="200" Height="66" Click="AgrandirLargeur"/>
+						<Button Content="Agrandir hauteur" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Width="200" Height="66" Click="AgrandirHauteur"/>
+						<Button Content="Rétrécir largeur" HorizontalAlignment="Left" Margin="329,46,0,0" VerticalAlignment="Top" Width="200" Height="65" Click="RetrecirLargeur"/>
+						<Button Content="Rétrécir hauteur" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="200" Height="65" Click="RetrecirHauteur"/>
+
+						<Slider HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="30" Width="160" TickFrequency="1" Maximum="10" Minimum="1" Orientation="Horizontal" TickPlacement="TopLeft" IsSnapToTickEnabled="True" Name="SliderRetrecirHauteur"/>
+						<TextBlock Text="{Binding ElementName=SliderRetrecirHauteur, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" Margin="175,130,668,116" />
+
+						<Slider HorizontalAlignment="Left" Margin="329,130,0,0" VerticalAlignment="Top" Height="30" Width="160" TickFrequency="1" Maximum="10" Minimum="1" Orientation="Horizontal" TickPlacement="TopLeft" IsSnapToTickEnabled="True" Name="SliderRetrecirLargeur"/>
+						<TextBlock Text="{Binding ElementName=SliderRetrecirLargeur, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment ="Center" HorizontalAlignment="Left" Margin="494,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="61" Width="35"/>
+
+						<Slider HorizontalAlignment="Left" Margin="628,130,0,0" VerticalAlignment="Top" Height="30" Width="160" TickFrequency="1" Maximum="10" Minimum="1" Orientation="Horizontal" TickPlacement="TopLeft" IsSnapToTickEnabled="True" Name="SliderRetrecirImage"/>
+						<TextBlock Text="{Binding ElementName=SliderRetrecirImage, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment ="Center" HorizontalAlignment="Left" Margin="793,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="61" Width="35"/>
+
+						<Slider HorizontalAlignment="Left" Margin="10,280,0,-10" VerticalAlignment="Top" Height="30" Width="160" TickFrequency="1" Maximum="10" Minimum="1" Orientation="Horizontal" TickPlacement="TopLeft" IsSnapToTickEnabled="True" Name="SliderAgrandirHauteur"/>
+						<TextBlock Text="{Binding ElementName=SliderAgrandirHauteur, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment ="Center" HorizontalAlignment="Left" Margin="175,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="35"/>
+
+						<Slider HorizontalAlignment="Left" Margin="329,280,0,-3" VerticalAlignment="Top" Height="30" Width="160" TickFrequency="1" Maximum="10" Minimum="1" Orientation="Horizontal" TickPlacement="TopLeft" IsSnapToTickEnabled="True" Name="SliderAgrandirLargeur"/>
+						<TextBlock Text="{Binding ElementName=SliderAgrandirLargeur, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment ="Center" HorizontalAlignment="Left" Margin="494,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="35"/>
+
+						<Slider HorizontalAlignment="Left" Margin="628,280,0,-3" VerticalAlignment="Top" Height="30" Width="160" TickFrequency="1" Maximum="10" Minimum="1" Orientation="Horizontal" TickPlacement="TopLeft" IsSnapToTickEnabled="True" Name="SliderAgrandirImage"/>
+						<TextBlock Text="{Binding ElementName=SliderAgrandirImage, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment ="Center" HorizontalAlignment="Left" Margin="793,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="35"/>
+
+					</Grid>
+
+				</TabItem>
+				<TabItem Header="Filtres" Width="150">
+					<Grid>
+
+						<Button Content="Détection de contours" HorizontalAlignment="Left" Margin="100,50,0,0" VerticalAlignment="Top" Width="200" Click="Button_DectectionContours" Height="65"/>
+						<Button Content="Renforcement des bords" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Width="200" Click="Button_RenforcementDesBords" Height="65"/>
+						<Button Content="Flou" HorizontalAlignment="Left" Margin="550,200,0,0" VerticalAlignment="Top" Width="200" Click="Button_Flou" Height="65"/>
+						<Button Content="Repoussage" HorizontalAlignment="Left" Margin="550,50,0,0" VerticalAlignment="Top" Width="200" Click="Button_Repoussage" Height="65"/>
+
+					</Grid>
+				</TabItem>
+
+				<TabItem Header="Rotation" Width="150">
+					<Grid>
+
+						<Button Content="Rotation 90° Gauche" HorizontalAlignment="Left" Margin="0,130,0,0" VerticalAlignment="Top" Width="200" Click ="Button_Rotation" Height="65"/>
+						<Button Content="Rotation 90° Droite" HorizontalAlignment="Left" Margin="680,130,0,0" VerticalAlignment="Top" Width="200" Click ="Button_RotationTriple" Height="65"/>
+						<Button Content="Rotation 180°" HorizontalAlignment="Left" Margin="340,130,0,0" VerticalAlignment="Top" Width="200" Click ="Button_Rotation180" Height="65"/>
+
+					</Grid>
+				</TabItem>
+
+				<TabItem Header="Spéciaux" Width="150">
+					<Grid>
+
+						<Button Content="Fractale" HorizontalAlignment="Left" Margin="100,50,0,0" VerticalAlignment="Top" Width="200" Click="Button_Fractale" Height="65"/>
+						<Button Content="Histogramme" HorizontalAlignment="Left" Margin="100,200,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.488,0.526" Click="Button_Histogramme" Height="65"/>
+						<Button Content="Coder cette image dans une autre" HorizontalAlignment="Left" Margin="550,200,0,0" VerticalAlignment="Top" Width="200" Click="Button_CoderImageDansUneAutre" Height="65"/>
+						<Button Content="Décoder une image" HorizontalAlignment="Left" Margin="550,50,0,0" VerticalAlignment="Top" Width="200" Click="Button_DécoderImageDansUneAutre" Height="65"/>
+
+					</Grid>
+
+				</TabItem>
+			</TabControl>
+		</DockPanel>
+
+		<TextBlock HorizontalAlignment="Left" Margin="10,118,0,0" TextWrapping="Wrap" Text="ATTENTION : Si vous changez d'image, veuillez choisir un nouvel emplacement de sauvegarde" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="22" Width="595"/>
+
+
+		<Rectangle x:Name="Cache1" Fill="White" Height="74" Margin="190,38,70.5,0" Stroke="White" VerticalAlignment="Top"/>
+		<Rectangle x:Name="Cache2" Fill="White" Margin="0,145,73,10" Stroke="White" Grid.ColumnSpan="2"/>
+		<Rectangle x:Name="Cache3" Fill="White" HorizontalAlignment="Left" Height="77" Margin="430,38,0,0" Stroke="White" VerticalAlignment="Top" Width="214" Grid.ColumnSpan="2"/>
+		<Rectangle x:Name="Cache4" Fill="White" HorizontalAlignment="Left" Height="38" Margin="10,107,0,0" Stroke="White" VerticalAlignment="Top" Width="510" Grid.ColumnSpan="2"/>
+
+
+	</Grid>
+
+</Window>
